@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang đăng nhập</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+    .login-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 320px;
+      animation: fadeIn 0.8s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      color: #ff00e1;
+      margin-bottom: 25px;
+      text-align: center;
+      font-size: 28px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 25px;
+      border: 2px solid #fce4ec;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+      box-sizing: border-box;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #ff00e1;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff00e1;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+      background-color: #b3007d;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255,0,225,0.3);
+    }
+    .gif-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      animation: floatAnimation 3s ease-in-out infinite;
+    }
+    @keyframes floatAnimation {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    .gif-container img {
+      width: 150px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Nhập mật khẩu</h2>
+    <input type="text" id="password" placeholder="Mật khẩu">
+    <button onclick="login()">Đăng nhập</button>
+  </div>
+
+  
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+
+    function login() {
+        const password = document.getElementById("password").value;
+        if (password === "21042006") {
+            window.location.href = "about.html";
+        } else {
+            alert("Sai rồi tongtailanhlung ơi!");
+        }
+    }
+
+  </script>
+  
+</body>
+</html>

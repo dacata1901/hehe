@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình ảnh</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: #fce4ec;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 50px;
+        }
+        .scroll-container {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .image-group {
+            display: flex;
+            flex-shrink: 0;
+        }
+        img {
+            height: 300px;
+            width: auto;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .audio-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 15px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .audio-container audio {
+            width: 220px;
+            outline: none;
+        }
+    
+
+    .audio-container {
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 16px 24px;
+      border-radius: 20px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+      z-index: 1000;
+    }
+
+    .audio-container audio {
+      width: 300px;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    .next-button {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffcf44;
+      color: #111;
+      border: none;
+      padding: 14px 36px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s, transform 0.2s;
+      z-index: 999;
+    }
+
+    .next-button:hover {
+      background: #ffd84d;
+      transform: translateX(-50%) scale(1.05);
+    }
+
+    h1 {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #f9f9f9;
+    }
+
+    @media (max-width: 400px) {
+      .audio-container audio {
+        width: 90vw;
+      }
+
+      .next-button {
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+    }
+    </style>
+</head>
+<body>
+ 
+    
+    <div class="scroll-container">
+        <div class="image-group">
+            <img src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482552VaH/anh-mo-ta.png" alt="Image 1">
+            <img src="https://phongvu.vn/cong-nghe/wp-content/uploads/2024/09/Meme-meo-de-thuong-4-1024x1024.jpg">
+            <img src="https://cdn2.fptshop.com.vn/small/Meme_meo_tang_hoa_13_44caa2bf0e.jpg" alt="Image 2">
+            <img src="https://yeudialy.edu.vn/upload/2025/02/meme-meo-bua-01.webp">
+            <img src="https://devo.vn/wp-content/uploads/2023/01/meo-cam-sung.jpg">
+            <img src="Tran.gif" alt="Tran">
+        </div>
+        <div class="image-group">
+            <img src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482552VaH/anh-mo-ta.png" alt="Image 1">
+            <img src="https://phongvu.vn/cong-nghe/wp-content/uploads/2024/09/Meme-meo-de-thuong-4-1024x1024.jpg">
+            <img src="https://cdn2.fptshop.com.vn/small/Meme_meo_tang_hoa_13_44caa2bf0e.jpg" alt="Image 2">
+            <img src="https://yeudialy.edu.vn/upload/2025/02/meme-meo-bua-01.webp">
+            <img src="https://devo.vn/wp-content/uploads/2023/01/meo-cam-sung.jpg">
+            <img src="Tran.gif" alt="Tran">
+        </div>
+    </div>
+ 
+  </style>
+</head>
+<body>
+
+  <h1>🎧 NHAC CUA DOM CHUA</h1>
+
+  <div class="audio-container">
+    <audio autoplay controls preload="auto">
+      <source src="hongnhan.mp3" type="audio/mp3">
+     
+    </audio>
+  </div>
+
+  <button class="next-button" onclick="window.location.href='contact.html'">
+    ▶ Tiếp tục
+  </button>
+
+    
+
+</body>
+</html>
